@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <!-- <div class="colorPicker-container">
+        <span>
+          Change color:
+        </span>
+        <input type="color" id="colorPicker" value="#ea0100" />
+      </div>
+      <div class="calendar">
+        <div></div>
+        <div id="monthName"></div>
+        <div id="dayName"></div>
+        <div id="dayNumber"></div>
+        <div id="year"></div>
+      </div> -->
+
+      <div id="color-picker">
+        <div class="wrapper-dropdown">
+            <span @click="toggleDropdown()" v-html="selector"></span>
+            <ul class="dropdown" v-show="active">
+                <li v-for="color in colors" @click="setColor(color.hex, color.name)"><span :style="{background: color.hex}"></span> {{color.name}}</li>
+            </ul>
+        </div>
+        </div>
+    <script src="./main.js"></script>
+
+    
+</body>
+</html>
